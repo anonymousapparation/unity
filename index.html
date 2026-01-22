@@ -4,20 +4,19 @@
 
 <h2>Send Message to Unity</h2>
 
+<input id="msg" placeholder="Type here">
 <button onclick="send()">Send</button>
-<input id="msg">
 
 <script>
 function send() {
-  const img = new Image();
-  img.src =
-    "https://elh45smkxftg.share.zrok.io/?msg=" +
-    encodeURIComponent(document.getElementById("msg").value) +
-    "&t=" + Date.now();
+    const img = new Image();
+    img.src =
+      "https://elh45smkxftg.share.zrok.io/?msg=" +
+      encodeURIComponent(document.getElementById("msg").value) +
+      "&_=" + Date.now(); // cache buster
 }
 </script>
 
-
-
 </body>
 </html>
+

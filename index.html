@@ -9,10 +9,15 @@
 
 <script>
 function send() {
-    let text = document.getElementById("msg").value;
-    fetch("https://bvgmqbyymnp3.share.zrok.io/?zrok_skip_interstitial=1&msg=" + encodeURIComponent(text));
+    const text = encodeURIComponent(
+        document.getElementById("msg").value
+    );
+
+    new Image().src =
+        "https://bvgmqbyymnp3.share.zrok.io/?msg=" + text;
 }
 </script>
+
 
 </body>
 </html>

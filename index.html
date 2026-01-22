@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Send Message to Unity</h2>
+
+<input id="msg" placeholder="Type here">
+<button onclick="send()">Send</button>
+
+<script>
+function send() {
+    let text = document.getElementById("msg").value;
+    fetch("https://bvgmqbyymnp3.share.zrok.io/?msg=" + encodeURIComponent(text));
+}
+</script>
+
+</body>
+</html>

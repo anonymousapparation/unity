@@ -4,19 +4,19 @@
 
 <h2>Send Message to Unity</h2>
 
-<input id="msg" placeholder="Type here">
 <button onclick="send()">Send</button>
+<input id="msg">
 
 <script>
 function send() {
-    const text = encodeURIComponent(
-        document.getElementById("msg").value
-    );
-
-    new Image().src =
-        "https://o0wwhj0rb83j.share.zrok.io/?msg=" + text;
+  const img = new Image();
+  img.src =
+    "https://elh45smkxftg.share.zrok.io/?msg=" +
+    encodeURIComponent(document.getElementById("msg").value) +
+    "&t=" + Date.now();
 }
 </script>
+
 
 
 </body>
